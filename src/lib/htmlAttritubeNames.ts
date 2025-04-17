@@ -1,6 +1,4 @@
-// Do not edit, this is generated file, last update at 4/17/2025, 3:15:28 AM GMT+6:30
-
-export const htmlAttributeNames: string[] = Object.assign(
+export const htmlAttributeNames: string[] = Object.freeze(
 	JSON.parse(
 		`["accept","accept-charset","accesskey","action","align","allow","alt","as","async","autocapitalize","autocomplete","autoplay","background","bgcolor","border","capture","charset","checked","cite","class","color","cols","colspan","content","contenteditable","controls","coords","crossorigin","csp","data","data-*","datetime","decoding","default","defer","dir","dirname","disabled","download","draggable","enctype","enterkeyhint","elementtiming","for","form","formaction","formenctype","formmethod","formnovalidate","formtarget","headers","height","hidden","high","href","hreflang","http-equiv","id","integrity","intrinsicsize","inputmode","ismap","itemprop","kind","label","lang","language","loading","list","loop","low","max","maxlength","minlength","media","method","min","multiple","muted","name","novalidate","open","optimum","pattern","ping","placeholder","playsinline","poster","preload","readonly","referrerpolicy","rel","required","reversed","role","rows","rowspan","sandbox","scope","scopedNon-standard","selected","shape","size","sizes","slot","span","spellcheck","src","srcdoc","srclang","srcset","start","step","style","summary","tabindex","target","title","translate","type","usemap","value","width","wrap"]`,
 	),

@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 import $ from "dax-sh";
 import fs from "node:fs/promises";
-import { getAttr } from "./getattr.mjs";
-import { tsTemplate } from "./template.mjs";
+import { getAttr } from "./getattr.js";
+import { tsTemplate } from "./template.js";
+import { _obj } from "./attrs.js";
 
-const attrNamesFname = "./src/attributes/htmlAttritubeNames.ts";
+const attrNamesFname = "./src/lib/htmlAttritubeNames.ts";
 
-const attrInfoFname = "./src/attributes/htmlAttritubeInfo.ts";
+const attrInfoFname = "./src/lib/htmlAttritubeInfo.ts";
 
-const attrTypesFname = "./src/attributes/htmlAttritubetypes.ts";
+const attrTypesFname = "./src/lib/htmlAttritubetypes.ts";
+
+const attrsFnName = "./src/index.ts";
 
 const now = new Date().toLocaleString("en-US", { timeZoneName: "short" });
 
@@ -21,21 +24,30 @@ await (async function () {
   const attrString = attrStringArray.join(" | ");
   const txt = `
   // Do not edit, this is generated file, last update at ${now}
-  
+  import type { HTMLTagNames } from "mmtreeast-html-tags";
   export type HTMLAttritubeNames = ${attrString}
   `;
   await fs.writeFile(attrTypesFname, txt);
-  await $`npx biome format ${attrTypesFname} --write`;
 })();
 
 const dataText = tsTemplate(data.tableData, data.attrNames, now);
 
 await (async function () {
   await fs.writeFile(attrInfoFname, dataText.attrInfo);
-  await $`npx biome format ${attrInfoFname} --write`;
 })();
 
 await (async function () {
   await fs.writeFile(attrNamesFname, dataText.attrName);
-  await $`npx biome format ${attrNamesFname} --write`;
 })();
+
+await (async function () {
+  const txt = `
+  import type { HTMLTagNames } from "mmtreeast-html-tags";
+
+  export const htmlAttributes: Partial<Record<HTMLTagNames,{attr:string[];global:string[]}>> = Object.freeze(JSON.parse(\`${_obj}\`));
+  `;
+  await fs.writeFile(attrsFnName, txt);
+})();
+
+await $`npx biome check src --write`;
+await $`npx biome format src --write`;
