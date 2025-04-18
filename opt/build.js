@@ -15,7 +15,7 @@ if (!existsSync(out_dir)) {
 const options = {
   indexFile: {
     path: "./src/index.ts",
-    lines: 1,
+    lines: 2,
   },
   otherFiles: [
     {

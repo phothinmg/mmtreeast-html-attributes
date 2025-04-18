@@ -38,9 +38,3 @@ tags.map((tag) => {
 });
 
 export const _obj = JSON.stringify(obj);
-
-export const attrString = `
-import type { HTMLTagNames } from "mmtreeast-html-tags";
-
-export const htmlAttributes: Partial<Record<HTMLTagNames,{attr:string[];global:string[]}>> = Object.freeze(JSON.parse(\`${_obj}\`));
-`;

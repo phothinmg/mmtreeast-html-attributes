@@ -43,8 +43,9 @@ await (async function () {
 await (async function () {
   const txt = `
   import type { HTMLTagNames } from "mmtreeast-html-tags";
+  import type { HTMLAttritubeNames } from "./lib/htmlAttritubetypes"
 
-  export const htmlAttributes: Partial<Record<HTMLTagNames,{attr:string[];global:string[]}>> = Object.freeze(JSON.parse(\`${_obj}\`));
+  export const htmlAttributes: Partial<Record<HTMLTagNames,HTMLAttritubeNames[]>> = Object.freeze(JSON.parse(\`${_obj}\`));
   `;
   await fs.writeFile(attrsFnName, txt);
 })();
