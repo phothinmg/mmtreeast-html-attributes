@@ -24,6 +24,7 @@
       - [example][htmlAttributeInfo-experimental-example]
     - [note](#note)
       - [example][htmlAttributeInfo-note-example]
+- [License](#license)
 
 ## Overview
 
@@ -197,6 +198,10 @@ console.log(htmlAttributeInfo.align.note);
 // undefined
 ```
 
+## Related
+
+- [`mmtreeast-html-tags`][mmtreeast-html-tags]
+
 ## License
 
 [MIT][file-license] © [Pho Thin Mg][ptm]
@@ -222,3 +227,5 @@ console.log(htmlAttributeInfo.align.note);
 [htmlAttributeInfo-experimental-example]: #example-6
 
 [htmlAttributeInfo-note-example]: #example-7
+
+[mmtreeast-html-tags]: https://github.com/phothinmg/mmtreeast-html-tags
