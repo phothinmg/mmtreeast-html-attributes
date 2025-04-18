@@ -1,5 +1,4 @@
-import type { HTMLTagNames } from "mmtreeast-html-tags";
-import type { HTMLAttributeNames } from "./lib/htmlAttributeTypes";
+import type { HTMLAttributeNames, HTMLTagNames } from "mmtreeast-types";
 
 export const htmlAttributes: Partial<
 	Record<HTMLTagNames, HTMLAttributeNames[]>

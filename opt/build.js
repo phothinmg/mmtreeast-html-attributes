@@ -15,12 +15,9 @@ if (!existsSync(out_dir)) {
 const options = {
   indexFile: {
     path: "./src/index.ts",
-    lines: 2,
+    lines: 1,
   },
   otherFiles: [
-    {
-      path: "./src/lib/htmlAttributeTypes.ts",
-    },
     {
       path: "./src/lib/htmlAttributeNames.ts",
     },

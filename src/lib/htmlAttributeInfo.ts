@@ -1,4 +1,4 @@
-import type { HTMLAttributeNames } from "./htmlAttributeTypes";
+import type { HTMLAttributeNames } from "mmtreeast-types";
 
 type HTMLAttributeInfoValues = {
 	/**
@@ -26,6 +26,7 @@ type HTMLAttributeInfoValues = {
 	 */
 	note?: string;
 };
+
 export type HTMLAttributeInfo = Record<
 	HTMLAttributeNames,
 	HTMLAttributeInfoValues
