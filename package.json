@@ -6,9 +6,7 @@
   "scripts": {
     "build": "./opt/build.js",
     "check": "biome check src --write",
-    "format": "biome format src --write",
-    "gen": "./opt/index.js",
-    "prepublish": "npm run gen && npm run check"
+    "format": "biome format src --write"
   },
   "exports": {
     ".": {
