@@ -24,11 +24,12 @@
       - [example][htmlAttributeInfo-experimental-example]
     - [note](#note)
       - [example][htmlAttributeInfo-note-example]
+- [Related](#related)
 - [License](#license)
 
 ## Overview
 
-HTML attributes ,fetch from https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes.
+HTML attributes ,fetch from [MDN][mdn-link].
 
 ## Install
 
@@ -46,6 +47,8 @@ yarn add mmtreeast-html-attributes
 
 ## Use
 
+### ESM
+
 ```ts
 import {
   htmlAttributes,
@@ -53,6 +56,16 @@ import {
   htmlAttributeInfo,
 } from "mmtreeast-html-attributes";
 import type { HTMLAttributeNames } from "mmtreeast-html-attributes";
+```
+
+### Commonjs
+
+```js
+const {
+  htmlAttributes,
+  htmlAttributeNames,
+  htmlAttributeInfo,
+} = require("mmtreeast-html-attributes");
 ```
 
 ## API
@@ -209,23 +222,14 @@ console.log(htmlAttributeInfo.align.note);
 <!-- Definitions -->
 
 [file-license]: LICENSE
-
 [ptm]: https://github.com/phothinmg
-
 [htmlAttributes-example]: #example
-
 [htmlAttributeNames-example]: #example-1
-
 [htmlAttributeInfo-exlments-example]: #example-2
-
 [htmlAttributeInfo-des-example]: #example-3
-
 [htmlAttributeInfo-mdn-example]: #example-4
-
 [htmlAttributeInfo-deprecated-example]: #example-5
-
 [htmlAttributeInfo-experimental-example]: #example-6
-
 [htmlAttributeInfo-note-example]: #example-7
-
 [mmtreeast-html-tags]: https://github.com/phothinmg/mmtreeast-html-tags
+[mdn-link]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes
