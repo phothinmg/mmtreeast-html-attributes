@@ -1,6 +1,6 @@
-// Do not edit, this is generated file, last update at 4/18/2025, 4:21:40 PM GMT+6:30
+// Do not edit, this is generated file, last update at 4/18/2025, 6:34:15 PM GMT+6:30
 import type { HTMLTagNames } from "mmtreeast-html-tags";
-export type HTMLAttritubeNames =
+export type HTMLAttributeNames =
 	| "accept"
 	| "accept-charset"
 	| "accesskey"

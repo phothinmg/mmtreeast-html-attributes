@@ -5,11 +5,11 @@ import { getAttr } from "./getattr.js";
 import { tsTemplate } from "./template.js";
 import { _obj } from "./attrs.js";
 
-const attrNamesFname = "./src/lib/htmlAttritubeNames.ts";
+const attrNamesFname = "./src/lib/htmlAttributeNames.ts";
 
-const attrInfoFname = "./src/lib/htmlAttritubeInfo.ts";
+const attrInfoFname = "./src/lib/htmlAttributeInfo.ts";
 
-const attrTypesFname = "./src/lib/htmlAttritubetypes.ts";
+const attrTypesFname = "./src/lib/htmlAttributeTypes.ts";
 
 const attrsFnName = "./src/index.ts";
 
@@ -25,7 +25,7 @@ await (async function () {
   const txt = `
   // Do not edit, this is generated file, last update at ${now}
   import type { HTMLTagNames } from "mmtreeast-html-tags";
-  export type HTMLAttritubeNames = ${attrString}
+  export type HTMLAttributeNames = ${attrString}
   `;
   await fs.writeFile(attrTypesFname, txt);
 })();
@@ -43,9 +43,9 @@ await (async function () {
 await (async function () {
   const txt = `
   import type { HTMLTagNames } from "mmtreeast-html-tags";
-  import type { HTMLAttritubeNames } from "./lib/htmlAttritubetypes"
+  import type { HTMLAttributeNames } from "./lib/htmlAttributeTypes"
 
-  export const htmlAttributes: Partial<Record<HTMLTagNames,HTMLAttritubeNames[]>> = Object.freeze(JSON.parse(\`${_obj}\`));
+  export const htmlAttributes: Partial<Record<HTMLTagNames,HTMLAttributeNames[]>> = Object.freeze(JSON.parse(\`${_obj}\`));
   `;
   await fs.writeFile(attrsFnName, txt);
 })();

@@ -19,13 +19,13 @@ const options = {
   },
   otherFiles: [
     {
-      path: "./src/lib/htmlAttritubetypes.ts",
+      path: "./src/lib/htmlAttributeTypes.ts",
     },
     {
-      path: "./src/lib/htmlAttritubeNames.ts",
+      path: "./src/lib/htmlAttributeNames.ts",
     },
     {
-      path: "./src/lib/htmlAttritubeInfo.ts",
+      path: "./src/lib/htmlAttributeInfo.ts",
       lines: 1,
     },
   ],
