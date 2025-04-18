@@ -1,5 +1,8 @@
 # mmtreeast-html-attributes
 
+![GitHub Actions Workflow Status][npm-publish] ![GitHub Actions Workflow Status][code-ql]
+
+
 ## Content
 
 - [Overview](#overview)
@@ -233,3 +236,7 @@ console.log(htmlAttributeInfo.align.note);
 [htmlAttributeInfo-note-example]: #example-7
 [mmtreeast-html-tags]: https://github.com/phothinmg/mmtreeast-html-tags
 [mdn-link]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes
+
+[npm-publish]: https://img.shields.io/github/actions/workflow/status/phothinmg/mmtreeast-html-attributes/npm-publish.yml?style=for-the-badge&logo=npm&label=npm%20publish
+
+[code-ql]: https://img.shields.io/github/actions/workflow/status/phothinmg/mmtreeast-html-attributes/codeql.yml?style=for-the-badge&logo=github&label=codeql
