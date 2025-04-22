@@ -2,7 +2,6 @@
 
 ![GitHub Actions Workflow Status][npm-publish] ![GitHub Actions Workflow Status][code-ql]
 
-
 ## Content
 
 - [Overview](#overview)
@@ -54,20 +53,19 @@ yarn add mmtreeast-html-attributes
 
 ```ts
 import {
-  htmlAttributes,
-  htmlAttributeNames,
-  htmlAttributeInfo,
+  attributes,
+  global_attributes,
+  non_global_attributes,
 } from "mmtreeast-html-attributes";
-import type { HTMLAttributeNames } from "mmtreeast-html-attributes";
 ```
 
 ### Commonjs
 
 ```js
 const {
-  htmlAttributes,
-  htmlAttributeNames,
-  htmlAttributeInfo,
+  attributes,
+  global_attributes,
+  non_global_attributes,
 } = require("mmtreeast-html-attributes");
 ```
 
@@ -77,142 +75,9 @@ const {
 
 - This package exports:
 
-  - javascript object : `htmlAttributes` , `htmlAttributeNames`, `htmlAttributeInfo`
-  - type : `HTMLAttributeNames`
+  - javascript object : `attributes` , `global_attributes`, `non_global_attributes`
 
 - There is no default export.
-
-### `htmlAttributes`
-
-Return an array of HTML attributes name of a HTML tag name.
-
-#### example
-
-```js
-import { htmlAttributes } from "mmtreeast-html-attributes";
-
-console.log(htmlAttributes.a);
-
-/*
-[
-  'accesskey', 'autocapitalize',
-  'class',     'contenteditable',
-  'data-*',    'dir',
-  'draggable', 'hidden',
-  'id',        'itemprop',
-  'lang',      'role',
-  'slot',      'spellcheck',
-  'style',     'tabindex',
-  'title',     'translate'
-]
-*/
-```
-
-### `htmlAttributeNames`
-
-An array of HTML attribute names.
-
-#### example
-
-```js
-import { htmlAttributeNames } from "mmtreeast-html-attributes";
-
-console.log(htmlAttributeNames.slice(3, 10));
-// [ 'action', 'align', 'allow', 'alt', 'as', 'async', 'autocapitalize' ]
-```
-
-### `htmlAttributeInfo`
-
-Return a object of some information for a HTML attribute.
-
-#### elements
-
-HTML tag name or an array of HTML tag names that can use this attribute.
-
-##### example
-
-```js
-import { htmlAttributeInfo } from "mmtreeast-html-attributes";
-
-console.log(htmlAttributeInfo.align.elements);
-/* 
-[
-  'caption',  'col',
-  'colgroup', 'hr',
-  'iframe',   'img',
-  'table',    'tbody',
-  'td',       'tfoot',
-  'th',       'thead',
-  'tr'
-]
-*/
-```
-
-#### description
-
-Short description of this attribute.
-
-##### example
-
-```js
-import { htmlAttributeInfo } from "mmtreeast-html-attributes";
-
-console.log(htmlAttributeInfo.align.description);
-
-// Specifies the horizontal alignment of the element.
-```
-
-#### MDN
-
-MDN link for this attribute, if it is undefined, deprecated or the documentation has not yet been written.
-
-##### example
-
-```js
-import { htmlAttributeInfo } from "mmtreeast-html-attributes";
-
-console.log(htmlAttributeInfo.align.MDN);
-// undefined
-```
-
-#### deprecated
-
-If this attribute is deprecated return `true`(not for use in new websites) otherwise `undefined`.
-
-##### example
-
-```js
-import { htmlAttributeInfo } from "mmtreeast-html-attributes";
-
-console.log(htmlAttributeInfo.align.deprecated);
-// true
-```
-
-#### experimental
-
-If this attribute is experimental return `true`( expect behavior to change in the future) otherwise `undefined`.
-
-##### example
-
-```js
-import { htmlAttributeInfo } from "mmtreeast-html-attributes";
-
-console.log(htmlAttributeInfo.align.experimental);
-// undefined
-```
-
-#### note
-
-Additional information provided by MDN if it is exist, otherwise `undefined`.
-
-##### example
-
-```js
-import { htmlAttributeInfo } from "mmtreeast-html-attributes";
-
-console.log(htmlAttributeInfo.align.note);
-// undefined
-```
 
 ## Related
 
@@ -236,7 +101,5 @@ console.log(htmlAttributeInfo.align.note);
 [htmlAttributeInfo-note-example]: #example-7
 [mmtreeast-html-tags]: https://github.com/phothinmg/mmtreeast-html-tags
 [mdn-link]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes
-
 [npm-publish]: https://img.shields.io/github/actions/workflow/status/phothinmg/mmtreeast-html-attributes/npm-publish.yml?style=for-the-badge&logo=npm&label=npm%20publish
-
 [code-ql]: https://img.shields.io/github/actions/workflow/status/phothinmg/mmtreeast-html-attributes/codeql.yml?style=for-the-badge&logo=github&label=codeql

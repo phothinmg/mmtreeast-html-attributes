@@ -32,8 +32,7 @@
     "provenance": true
   },
   "dependencies": {
-    "lwe8-build": "^0.1.12",
-    "mmtreeast-types": "^1.0.0"
+    "lwe8-build": "^0.1.12"
   },
   "repository": {
     "type": "git",
