@@ -1,6 +1,6 @@
 {
   "name": "mmtreeast-html-attributes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "HTML attribute names, fetch from MDN",
   "type": "module",
   "scripts": {
